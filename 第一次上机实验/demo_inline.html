@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验任务一、二：HTML基础标签与内部样式</title>
+
+    <style>
+        body {
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            font-size: 16px;
+            color: #333333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-family: "SimSun", serif;
+            font-size: 28px;
+            color: #2c3e50;
+            text-align: center;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 22px;
+            color: #2980b9;
+            font-weight: bold;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .highlight {
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 250px;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #219a52;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .image-caption {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    
+
+    <h1>Javaweb实验课程作业展示</h1>
+
+    <hr>
+
+
+    <h2>一、段落标签 &lt;p&gt;</h2>
+    <p>这是一个普通的段落。HTML中的段落标签用于定义文本段落，浏览器会自动在段落前后添加空白间距。</p>
+    <p>这是另一个段落。通过CSS样式，我们可以控制段落的字体、颜色、行高等属性，使页面内容更加美观易读。</p>
+
+    <hr>
+
+
+    <h2>二、行内标签 &lt;span&gt; 与换行标签 &lt;br&gt;</h2>
+    <p>
+        这是一段包含<span class="highlight">行内标签（span）</span>的文本。
+        <span style="color: #8e44ad;">span标签</span>不会对文档布局产生任何影响，
+        它纯粹是一个容器，用于对行内元素进行样式设置或添加脚本行为。
+    </p>
+    <p>
+        下面是换行标签的使用示例：<br>
+        这是第一行文本（使用br标签换行）<br>
+        这是第二行文本<br>
+        这是第三行文本<br>
+        <span class="highlight">注意：br标签是一个空标签，用于在文本中插入一个简单的换行符。</span>
+    </p>
+
+    <hr>
+
+
+    <h2>三、表格标签 &lt;table&gt;</h2>
+    <p>下面的学生信息表格展示了表格标签的综合使用：</p>
+    <table>
+        <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>专业</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2023001</td>
+                <td>张三</td>
+                <td>男</td>
+                <td>计算机科学与技术</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>2023002</td>
+                <td>李四</td>
+                <td>女</td>
+                <td>软件工程</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>2023003</td>
+                <td>王五</td>
+                <td>男</td>
+                <td>网络工程</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>2023004</td>
+                <td>赵六</td>
+                <td>女</td>
+                <td>信息安全</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+
+    <h2>四、表单标签 &lt;form&gt;</h2>
+    <div class="info-box">
+        <p>请填写以下学生信息登记表：</p>
+    </div>
+    <form action="#" method="post">
+        <p>
+            <label for="username">用户名：</label>
+            <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+        </p>
+        <p>
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </p>
+        <p>
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" placeholder="请输入密码" required>
+        </p>
+        <p>
+            <label for="gender">性别：</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male" style="width: auto; font-weight: normal;">男</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" style="width: auto; font-weight: normal;">女</label>
+        </p>
+        <p>
+            <label for="major">专业：</label>
+            <select id="major" name="major">
+                <option value="">--请选择专业--</option>
+                <option value="cs">计算机科学与技术</option>
+                <option value="se">软件工程</option>
+                <option value="ne">网络工程</option>
+                <option value="is">信息安全</option>
+            </select>
+        </p>
+        <p>
+            <label for="hobby">爱好：</label>
+            <input type="checkbox" id="reading" name="hobby" value="reading">
+            <label for="reading" style="width: auto; font-weight: normal;">阅读</label>
+            <input type="checkbox" id="sports" name="hobby" value="sports">
+            <label for="sports" style="width: auto; font-weight: normal;">运动</label>
+            <input type="checkbox" id="music" name="hobby" value="music">
+            <label for="music" style="width: auto; font-weight: normal;">音乐</label>
+        </p>
+        <p>
+            <label for="intro">自我介绍：</label><br><br>
+            <textarea id="intro" name="intro" rows="4" cols="50" placeholder="请简单介绍你自己..."></textarea>
+        </p>
+        <p style="text-align: center;">
+            <input type="submit" value="提交注册">
+            <input type="reset" value="重置" style="background-color: #95a5a6; color: white; padding: 10px 25px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; margin-left: 10px;">
+        </p>
+    </form>
+
+    <hr>
+
+
+    <h2>五、图像标签 &lt;img&gt;</h2>
+    <div class="image-container">
+
+        <img src="https://picsum.photos/400/250?random=1" alt="示例图片1" width="400" height="250">
+        <p class="image-caption">图1：随机示例图片（使用img标签插入）</p>
+    </div>
+    <div class="image-container">
+        <img src="https://picsum.photos/400/250?random=2" alt="示例图片2" width="400" height="250">
+        <p class="image-caption">图2：另一张示例图片</p>
+    </div>
+
+    <hr>
+
+
+    <h2>六、综合样式展示</h2>
+    <div class="info-box">
+        <p style="font-family: 'SimSun', serif; font-size: 20px; color: #c0392b; font-weight: bold; text-align: center;">
+            这段文字使用了宋体、20px字号、红色、加粗、居中对齐的样式
+        </p>
+        <p style="font-family: 'Microsoft YaHei', sans-serif; font-size: 14px; color: #27ae60; text-align: right;">
+            这段文字使用了微软雅黑、14px字号、绿色、右对齐的样式
+        </p>
+        <p style="font-family: Arial, sans-serif; font-size: 24px; color: #8e44ad; font-weight: bold; text-align: left;">
+            这段文字使用了Arial、24px字号、紫色、加粗、左对齐的样式
+        </p>
+    </div>
+
+    <hr>
+
+    <p style="text-align: center; color: #7f8c8d; font-size: 14px;">
+        &copy; 2026 Javaweb实验课程 | 任务一、二完成展示
+    </p>
+
+</body>
+</html>
