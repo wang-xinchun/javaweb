@@ -1,0 +1,212 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "SimHei", "PingFang SC", sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #5d4b3d;
+    height: 56px;
+    line-height: 56px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a {
+    display: block;
+    padding: 0 16px;
+    color: #ddd;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.nav-menu > li > a:hover {
+    color: #fff;
+}
+
+.nav-menu > li > a.active {
+    background-color: #f39800;
+    color: #fff;
+}
+
+/* 下拉菜单 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 120px;
+    z-index: 100;
+    line-height: 1.5;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+    color: #f39800;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+/* 右侧图标 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+.cart-count {
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+/* 主内容 */
+.main-content {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    color: #e67e22;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+/* 注册表单 */
+.register-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #888;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #999;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.4);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+/* 提交按钮 */
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    display: inline-block;
+    width: 120px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #d35400;
+}
